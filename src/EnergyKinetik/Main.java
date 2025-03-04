@@ -1,32 +1,5 @@
+package EnergyKinetik;
 import java.util.Scanner;
-
-class MainKinetik {
-    private double massa;
-    private double kecepatan;
-
-    // Setter
-    public void setMassa(double massa) {
-        this.massa = massa;
-    }
-
-    public void setKecepatan(double kecepatan) {
-        this.kecepatan = kecepatan;
-    }
-
-    // Getter
-    public double getMassa() {
-        return massa;
-    }
-
-    public double getKecepatan() {
-        return kecepatan;
-    }
-
-    // Metode untuk menghitung energi kinetik
-    public double hitungEnergiKinetik() {
-        return 0.5 * massa * Math.pow(kecepatan, 2);
-    }
-}
 
 public class Main {
     public static void main(String[] args) {
@@ -35,6 +8,7 @@ public class Main {
         
         double massa;
         do {
+            // input massa
             System.out.print("Masukkan massa (kg): ");
             massa = scanner.nextDouble();
             if (massa <= 0) {
@@ -45,7 +19,7 @@ public class Main {
         
         double kecepatan;
         do {
-            // Input kecepatan
+            // input kecepatan
             System.out.print("Masukkan kecepatan (m/s): ");
             kecepatan = scanner.nextDouble();
             if (kecepatan <= 0) {
@@ -54,7 +28,7 @@ public class Main {
         } while (kecepatan <= 0);
         kinetik.setKecepatan(kecepatan);
          
-        // Menampilkan hasil perhitungan
+        // menampilkan hasil perhitungan
         System.out.println("Energi Kinetik: " + kinetik.hitungEnergiKinetik() + " Joule");
         scanner.close();
     }
